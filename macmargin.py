@@ -1,17 +1,67 @@
 """
 Calculates MAC margin requirements for a portfolio.
-    * http://pandas.pydata.org/pandas-docs/stable/install.html
 """
 
-import pandas as pd
-import numpy as np
-import scipy.io as sio
+import sys
 import os.path
-import optionpricing_tte
+import numpy as np
+import optionpricing_tte as bs
+import time
 
-def calc_pricerisk():
-    return None
+def calc_pricerisk(portfolio, timestamp):
+    """Accept a portfolio. Calculate MAC price risk.
+    Return an array: rows = positions, cols = price shocks."""
+    priceShocks = [-0.20, -0.175, -0.15, -0.125, -0.10, -0.08,
+                   -0.06,  -0.04, -0.03,  -0.02, -0.01,     0, 
+                    0.01,   0.02,  0.03,   0.04,  0.06, 
+                    0.08,   0.10, 0.125,   0.15, 0.175,  0.20]
+                    
+    nPos = portfolio.shape[0]
+    nPriceShock = len(priceShocks)
+    priceRisk = np.zeros((nPos, nPriceShock))
     
+    for row in range(0,nPos):
+        oType = portfolio[row, 2]
+        
+        for col in range(0, len(priceShocks)):
+            priceShock = priceShocks[col]
+            
+            if oType == 3 or oType == 4:
+                    # Stock and futures
+                    mult = portfolio[row, 16]
+                    quantity = portfolio[row, 3]
+                    curPrice = portfolio[row, 5]
+                    newPrice = curPrice * (1 + priceShock)
+                    pnl = mult * quantity * (newPrice - curPrice)
+                    priceRisk[row, col] = pnl
+                    
+            elif oType == 1 or oType == 2:
+                    # Options
+                    mult = portfolio[row, 16]
+                    quantity = portfolio[row, 3]
+                    curForward = portfolio[row, 15]
+                    newForward = curForward * (1 + priceShock)
+
+                    strike = portfolio[row, 1]
+                    iv = portfolio[row, 4]
+                    tte = portfolio[row, 14]
+                    newPrice = bs.calc_price(newForward, strike, iv, tte, oType)
+                    curPrice = portfolio[row, 5]
+                    pnl = mult * quantity * (newPrice - curPrice)
+                    priceRisk[row, col] = pnl
+                    
+            else:
+                print 'Error - Position type (%r) not recognized.' % oType
+                return None
+                
+    totalPriceRisk = priceRisk.sum(axis = 0)
+    worstIdx = np.argmin(totalPriceRisk)
+    print 'The worst price shock bucket is %r.' % priceShocks[worstIdx]
+    
+    outFileName = 'priceRisk' + timestamp + '.csv' 
+    np.savetxt(outFileName, priceRisk, delimiter = ',')
+    return priceRisk  
+                
 def calc_volrisk():
     return None
     
@@ -27,28 +77,33 @@ def calc_volliquiditycharge():
 def calc_volshock():
     return None
     
-def get_position(fileName):
-    """Loads a .mat file into a numpy nd-array. 
-       File name must include full path."""
-    data = sio.loadmat(fileName)
-    return data['pos'], data['comboList']
-    
-def test():
-    fileName = '/home/ubuntu/workspace/Position_Total1.mat'
+def getPortfolio(fileName):
+    """CSV to numpy array containing a portfolio."""
     if not os.path.isfile(fileName):
-        print 'File not found.'
+        raise Exception('File does not exist.')
     else:
-        portfolio, comboList = get_position(fileName)
-        for position in range(portfolio.shape[0]):
-            # forward
-            # tte
-            oType    = portfolio[position, 1]
-            strike   = portfolio[position, 2]
-            quantity = portfolio[position, 5]
-            
-            # print oType, strike, quantity
-
-    print 'Done.'
+        portfolio = np.genfromtxt(fileName, delimiter = ',')
     
+    return portfolio
+    
+def timing(f):
+    def wrap(*args):
+        time1 = time.time()
+        ret = f(*args)
+        time2 = time.time()
+        print 'The %s function took %0.3f ms.' % (f.func_name, (time2-time1)*1000.0)
+    return wrap
+
+@timing
+def calc_margin(inFileName):
+    portfolio = getPortfolio(inFileName)
+    timestamp = inFileName[-18:-4]
+    
+    priceRisk = calc_pricerisk(portfolio, timestamp)
+
+
 ## Main
-test()
+script, fileName = sys.argv
+print 'Calculating margin...'
+calc_margin(fileName)
+print 'Done.'
