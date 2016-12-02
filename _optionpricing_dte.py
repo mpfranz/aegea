@@ -1,6 +1,6 @@
 """
 Black Model equations for calculating option price and greeks.
-* DTE is defined as the number of TRADING days to expiration
+* DTE is defined as the number of CALENDAR days to expiration
 * Uses discounted futures price in place of spot price in BS model
 * Functions return None in event of an error
 """
@@ -10,13 +10,13 @@ from scipy.stats import norm
 from math import log, sqrt, exp
 
 def calc_d1(forward, strike, iv, dte):
-    d1 = log(forward/strike) / (iv * sqrt(dte/252)) \
-         + iv/2 * sqrt(dte/252)
+    d1 = log(forward/strike) / (iv * sqrt(dte/365)) \
+         + iv/2 * sqrt(dte/365)
     return d1
 
 def calc_d2(forward, strike, iv, dte):
-    d2 = log(forward/strike) / (iv * sqrt(dte/252)) \
-         - iv/2 * sqrt(dte/252)
+    d2 = log(forward/strike) / (iv * sqrt(dte/365)) \
+         - iv/2 * sqrt(dte/365)
     return d2
     
 def calc_delta(forward, strike, iv, dte, oType):
@@ -42,7 +42,7 @@ def calc_gamma(forward, strike, iv, dte):
         gamma = 0
     else:
         d1 = calc_d1(forward, strike, iv, dte)
-        gamma = norm.pdf(d1) / (forward * iv * sqrt(dte/252))
+        gamma = norm.pdf(d1) / (forward * iv * sqrt(dte/365))
     
     return gamma
 
@@ -51,7 +51,7 @@ def calc_theta(forward, strike, iv, dte):
         theta = 0
     else:
         d1 = calc_d1(forward, strike, iv, dte)
-        theta = -forward * norm.pdf(d1) * iv / (2*sqrt(dte/252)) / 252
+        theta = -forward * norm.pdf(d1) * iv / (2*sqrt(dte/365)) / 365
         
     return theta
     
@@ -60,15 +60,15 @@ def calc_vega(forward, strike, iv, dte):
         vega = 0
     else:
         d1 = calc_d1(forward, strike, iv, dte)
-        vega = forward * norm.pdf(d1) * sqrt(dte/252) / 100
+        vega = forward * norm.pdf(d1) * sqrt(dte/365) / 100
     
     return vega
     
 def calc_charm(forward, strike, iv, dte):
     d1 = calc_d1(forward, strike, iv, dte)
     d2 = calc_d2(forward, strike, iv, dte)
-    charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/252)) \
-            / (2 * dte/252 * iv* sqrt(dte/252)) / 252
+    charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/365)) \
+            / (2 * dte/365 * iv* sqrt(dte/365)) / 365
     return charm
     
 def calc_deltatostrike(forward, delta, iv, dte, oType):
@@ -85,8 +85,8 @@ def calc_deltatostrike(forward, delta, iv, dte, oType):
         print 'Error - Option Type not recognized: ', oType
         return None
     
-    strike = forward * exp(-iv * sqrt(dte/252) * (norm.ppf(delta) \
-             - iv * sqrt(dte/252) / 2))
+    strike = forward * exp(-iv * sqrt(dte/365) * (norm.ppf(delta) \
+             - iv * sqrt(dte/365) / 2))
     
     return strike
 
@@ -129,7 +129,7 @@ def calc_price(forward, strike, iv, dte, oType):
     return price
     
 def calc_forward(spotPrice, interestRate, divYield, dte):
-    forward = spotPrice * exp((interestRate - divYield) * dte / 252)
+    forward = spotPrice * exp((interestRate - divYield) * dte / 365)
     return forward
     
 def calc_impliedvol(forward, strike, dte, oType, actualPrice):
@@ -159,50 +159,3 @@ def calc_impliedvol(forward, strike, dte, oType, actualPrice):
         print '\n\t Max. iterations (%r) exceeded.' % nIter
         
     return volMD
-
-# def test():
-#     print 'Running tests...'
-    
-#     # forward, strike, iv, dte, oType, delta, optionPrice, spotPrice, r, y
-    
-#     t1 = [2209.25, 2210, 0.1002, 15, 'C',  50.43, 21.60, 0, 0, 0]
-#     # t2 = [2209.25, 2210, 0.1002, 15, 'c',  50.43, 21.60, 0, 0, 0]
-#     # t3 = [2209.25, 2210, 0.1002, 15, 'P', -49.57, 21.60, 0, 0, 0]
-#     # t4 = [2209.25, 2210, 0.1002, 15, 'p', -49.57, 21.60, 0, 0, 0]
-    
-#     tests = [t1]
-#     nTest = 0
-    
-#     for test in tests:
-#         nTest = nTest + 1
-#         forward = test[0]
-#         strike = test[1]
-#         iv = test[2]
-#         dte = test[3]
-#         oType = test[4]
-#         delta = test[5]
-#         price = test [6]
-#         spotPrice = test[7]
-#         interestRate = test[8]
-#         divYield = test[9]
-    
-#         print '\nTest %r      ' % nTest
-#         print 'd1:         ', calc_d1(forward, strike, iv, dte)
-#         print 'd2:         ', calc_d2(forward, strike, iv, dte)
-#         print 'delta:      ', calc_delta(forward, strike, iv, dte, oType)
-#         print 'gamma:      ', calc_gamma(forward, strike, iv, dte)
-#         print 'theta:      ', calc_theta(forward, strike, iv, dte)
-#         print 'vega:       ', calc_vega(forward, strike, iv, dte)
-#         print 'charm:      ', calc_charm(forward, strike, iv, dte)
-#         print 'strike:     ', calc_deltatostrike(forward, delta, iv, dte, oType)
-#         print 'price:      ', calc_price(forward, strike, iv, dte, oType)
-#         print 'intrinsic:  ', calc_intrinsic(forward, strike, oType)
-#         print 'implied vol:', calc_impliedvol(forward, strike, dte, oType, price)
-#         print 'forward:    ', calc_forward(spotPrice, interestRate, divYield, dte)
-        
-#     # print '\nTesting complete. \n'
-
-# ## MAIN
-# test()
-    
-

@@ -3,7 +3,7 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {}, 
-    "module_name": "optionpricing_tte"
+    "module_name": "optionpricing_dte"
 }
 END: Cython Metadata */
 
@@ -405,8 +405,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__optionpricing_tte
-#define __PYX_HAVE_API__optionpricing_tte
+#define __PYX_HAVE__optionpricing_dte
+#define __PYX_HAVE_API__optionpricing_dte
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -622,7 +622,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "optionpricing_tte.pyx",
+  "optionpricing_dte.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -849,11 +849,11 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'optionpricing_tte' */
-#define __Pyx_MODULE_NAME "optionpricing_tte"
-int __pyx_module_is_main_optionpricing_tte = 0;
+/* Module declarations from 'optionpricing_dte' */
+#define __Pyx_MODULE_NAME "optionpricing_dte"
+int __pyx_module_is_main_optionpricing_dte = 0;
 
-/* Implementation of 'optionpricing_tte' */
+/* Implementation of 'optionpricing_dte' */
 static const char __pyx_k_d1[] = "d1";
 static const char __pyx_k_d2[] = "d2";
 static const char __pyx_k_iv[] = "iv";
@@ -908,11 +908,11 @@ static const char __pyx_k_calc_forward[] = "calc_forward";
 static const char __pyx_k_interestRate[] = "interestRate";
 static const char __pyx_k_calc_intrinsic[] = "calc_intrinsic";
 static const char __pyx_k_calc_impliedvol[] = "calc_impliedvol";
-static const char __pyx_k_optionpricing_tte[] = "optionpricing_tte";
+static const char __pyx_k_optionpricing_dte[] = "optionpricing_dte";
 static const char __pyx_k_calc_deltatostrike[] = "calc_deltatostrike";
 static const char __pyx_k_Max_iterations_r_exceeded[] = "\n\t Max. iterations (%r) exceeded.";
-static const char __pyx_k_Black_Model_equations_for_calcu[] = "\nBlack Model equations for calculating option price and greeks.\n* DTE is defined as the number of TRADING days to expiration\n* Uses discounted futures price in place of spot price in BS model\n* Functions return None in event of an error\n";
-static const char __pyx_k_home_ubuntu_workspace_optionpri[] = "/home/ubuntu/workspace/optionpricing_tte.pyx";
+static const char __pyx_k_Black_Model_equations_for_calcu[] = "\nBlack Model equations for calculating option price and greeks.\n* DTE is defined as the number of CALENDAR days to expiration\n* Uses discounted futures price in place of spot price in BS model\n* Functions return None in event of an error\n";
+static const char __pyx_k_home_ubuntu_workspace_optionpri[] = "/home/ubuntu/workspace/optionpricing_dte.pyx";
 static const char __pyx_k_Error_Option_Type_not_recognized[] = "Error - Option Type not recognized: ";
 static const char __pyx_k_Error_Option_Type_r_not_recogniz[] = "Error - Option Type %r not recognized.";
 static const char __pyx_k_Error_Option_type_not_recognized[] = "Error - Option type not recognized: ";
@@ -956,7 +956,7 @@ static PyObject *__pyx_n_s_math;
 static PyObject *__pyx_n_s_nIter;
 static PyObject *__pyx_n_s_norm;
 static PyObject *__pyx_n_s_oType;
-static PyObject *__pyx_n_s_optionpricing_tte;
+static PyObject *__pyx_n_s_optionpricing_dte;
 static PyObject *__pyx_n_s_pdf;
 static PyObject *__pyx_n_s_ppf;
 static PyObject *__pyx_n_s_price;
@@ -977,24 +977,24 @@ static PyObject *__pyx_n_s_volMD;
 static PyObject *__pyx_n_s_volUB;
 static PyObject *__pyx_n_s_x1;
 static PyObject *__pyx_n_s_x2;
-static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_delta, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_oType); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spotPrice, PyObject *__pyx_v_interestRate, PyObject *__pyx_v_divYield, PyObject *__pyx_v_dte); /* proto */
-static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType, PyObject *__pyx_v_actualPrice); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_calc_d1(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_2calc_d2(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_4calc_delta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_6calc_gamma(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_8calc_theta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_10calc_vega(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_12calc_charm(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_14calc_deltatostrike(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_delta, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_16calc_intrinsic(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_oType); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_18calc_price(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_20calc_forward(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spotPrice, PyObject *__pyx_v_interestRate, PyObject *__pyx_v_divYield, PyObject *__pyx_v_dte); /* proto */
+static PyObject *__pyx_pf_17optionpricing_dte_22calc_impliedvol(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType, PyObject *__pyx_v_actualPrice); /* proto */
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
 static PyObject *__pyx_int_10;
 static PyObject *__pyx_int_100;
-static PyObject *__pyx_int_252;
+static PyObject *__pyx_int_365;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_tuple__5;
@@ -1020,18 +1020,18 @@ static PyObject *__pyx_codeobj__20;
 static PyObject *__pyx_codeobj__22;
 static PyObject *__pyx_codeobj__24;
 
-/* "optionpricing_tte.pyx":12
+/* "optionpricing_dte.pyx":12
  * from math import log, sqrt, exp
  * 
  * def calc_d1(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
- *     d1 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          + iv/2 * sqrt(dte/252)
+ *     d1 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          + iv/2 * sqrt(dte/365)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_1calc_d1(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_1calc_d1 = {"calc_d1", (PyCFunction)__pyx_pw_17optionpricing_tte_1calc_d1, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_1calc_d1(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_1calc_d1(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_1calc_d1 = {"calc_d1", (PyCFunction)__pyx_pw_17optionpricing_dte_1calc_d1, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_1calc_d1(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_iv = 0;
@@ -1094,18 +1094,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_1calc_d1(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_d1", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 12, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_d1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_d1", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_calc_d1(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
+  __pyx_r = __pyx_pf_17optionpricing_dte_calc_d1(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
+static PyObject *__pyx_pf_17optionpricing_dte_calc_d1(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
   PyObject *__pyx_v_d1 = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1118,11 +1118,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("calc_d1", 0);
 
-  /* "optionpricing_tte.pyx":13
+  /* "optionpricing_dte.pyx":13
  * 
  * def calc_d1(forward, strike, iv, dte):
- *     d1 = log(forward/strike) / (iv * sqrt(dte/252)) \             # <<<<<<<<<<<<<<
- *          + iv/2 * sqrt(dte/252)
+ *     d1 = log(forward/strike) / (iv * sqrt(dte/365)) \             # <<<<<<<<<<<<<<
+ *          + iv/2 * sqrt(dte/365)
  *     return d1
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
@@ -1177,7 +1177,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
@@ -1233,10 +1233,10 @@ static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "optionpricing_tte.pyx":14
+  /* "optionpricing_dte.pyx":14
  * def calc_d1(forward, strike, iv, dte):
- *     d1 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          + iv/2 * sqrt(dte/252)             # <<<<<<<<<<<<<<
+ *     d1 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          + iv/2 * sqrt(dte/365)             # <<<<<<<<<<<<<<
  *     return d1
  * 
  */
@@ -1244,7 +1244,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
@@ -1303,9 +1303,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__
   __pyx_v_d1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":15
- *     d1 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          + iv/2 * sqrt(dte/252)
+  /* "optionpricing_dte.pyx":15
+ *     d1 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          + iv/2 * sqrt(dte/365)
  *     return d1             # <<<<<<<<<<<<<<
  * 
  * def calc_d2(forward, strike, iv, dte):
@@ -1315,12 +1315,12 @@ static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__
   __pyx_r = __pyx_v_d1;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":12
+  /* "optionpricing_dte.pyx":12
  * from math import log, sqrt, exp
  * 
  * def calc_d1(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
- *     d1 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          + iv/2 * sqrt(dte/252)
+ *     d1 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          + iv/2 * sqrt(dte/365)
  */
 
   /* function exit code */
@@ -1332,7 +1332,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("optionpricing_tte.calc_d1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_d1", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_d1);
@@ -1341,18 +1341,18 @@ static PyObject *__pyx_pf_17optionpricing_tte_calc_d1(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":17
+/* "optionpricing_dte.pyx":17
  *     return d1
  * 
  * def calc_d2(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
- *     d2 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          - iv/2 * sqrt(dte/252)
+ *     d2 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          - iv/2 * sqrt(dte/365)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_3calc_d2(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_3calc_d2 = {"calc_d2", (PyCFunction)__pyx_pw_17optionpricing_tte_3calc_d2, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_3calc_d2(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_3calc_d2(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_3calc_d2 = {"calc_d2", (PyCFunction)__pyx_pw_17optionpricing_dte_3calc_d2, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_3calc_d2(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_iv = 0;
@@ -1415,18 +1415,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_3calc_d2(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_d2", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 17, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_d2", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_d2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_2calc_d2(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
+  __pyx_r = __pyx_pf_17optionpricing_dte_2calc_d2(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
+static PyObject *__pyx_pf_17optionpricing_dte_2calc_d2(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
   PyObject *__pyx_v_d2 = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1439,11 +1439,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("calc_d2", 0);
 
-  /* "optionpricing_tte.pyx":18
+  /* "optionpricing_dte.pyx":18
  * 
  * def calc_d2(forward, strike, iv, dte):
- *     d2 = log(forward/strike) / (iv * sqrt(dte/252)) \             # <<<<<<<<<<<<<<
- *          - iv/2 * sqrt(dte/252)
+ *     d2 = log(forward/strike) / (iv * sqrt(dte/365)) \             # <<<<<<<<<<<<<<
+ *          - iv/2 * sqrt(dte/365)
  *     return d2
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
@@ -1498,7 +1498,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
@@ -1554,10 +1554,10 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "optionpricing_tte.pyx":19
+  /* "optionpricing_dte.pyx":19
  * def calc_d2(forward, strike, iv, dte):
- *     d2 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          - iv/2 * sqrt(dte/252)             # <<<<<<<<<<<<<<
+ *     d2 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          - iv/2 * sqrt(dte/365)             # <<<<<<<<<<<<<<
  *     return d2
  * 
  */
@@ -1565,7 +1565,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
@@ -1624,9 +1624,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
   __pyx_v_d2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":20
- *     d2 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          - iv/2 * sqrt(dte/252)
+  /* "optionpricing_dte.pyx":20
+ *     d2 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          - iv/2 * sqrt(dte/365)
  *     return d2             # <<<<<<<<<<<<<<
  * 
  * def calc_delta(forward, strike, iv, dte, oType):
@@ -1636,12 +1636,12 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
   __pyx_r = __pyx_v_d2;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":17
+  /* "optionpricing_dte.pyx":17
  *     return d1
  * 
  * def calc_d2(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
- *     d2 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          - iv/2 * sqrt(dte/252)
+ *     d2 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          - iv/2 * sqrt(dte/365)
  */
 
   /* function exit code */
@@ -1653,7 +1653,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("optionpricing_tte.calc_d2", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_d2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_d2);
@@ -1662,7 +1662,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":22
+/* "optionpricing_dte.pyx":22
  *     return d2
  * 
  * def calc_delta(forward, strike, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -1671,9 +1671,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_2calc_d2(CYTHON_UNUSED PyObject *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_5calc_delta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_5calc_delta = {"calc_delta", (PyCFunction)__pyx_pw_17optionpricing_tte_5calc_delta, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_5calc_delta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_5calc_delta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_5calc_delta = {"calc_delta", (PyCFunction)__pyx_pw_17optionpricing_dte_5calc_delta, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_5calc_delta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_iv = 0;
@@ -1745,18 +1745,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_5calc_delta(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_delta", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_delta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_delta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_4calc_delta(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte, __pyx_v_oType);
+  __pyx_r = __pyx_pf_17optionpricing_dte_4calc_delta(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte, __pyx_v_oType);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType) {
+static PyObject *__pyx_pf_17optionpricing_dte_4calc_delta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType) {
   PyObject *__pyx_v_d1 = NULL;
   PyObject *__pyx_v_x1 = NULL;
   PyObject *__pyx_v_delta = NULL;
@@ -1770,7 +1770,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("calc_delta", 0);
 
-  /* "optionpricing_tte.pyx":23
+  /* "optionpricing_dte.pyx":23
  * 
  * def calc_delta(forward, strike, iv, dte, oType):
  *     if iv == 0:             # <<<<<<<<<<<<<<
@@ -1783,7 +1783,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "optionpricing_tte.pyx":24
+    /* "optionpricing_dte.pyx":24
  * def calc_delta(forward, strike, iv, dte, oType):
  *     if iv == 0:
  *         d1 = 1             # <<<<<<<<<<<<<<
@@ -1793,7 +1793,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
     __Pyx_INCREF(__pyx_int_1);
     __pyx_v_d1 = __pyx_int_1;
 
-    /* "optionpricing_tte.pyx":23
+    /* "optionpricing_dte.pyx":23
  * 
  * def calc_delta(forward, strike, iv, dte, oType):
  *     if iv == 0:             # <<<<<<<<<<<<<<
@@ -1803,7 +1803,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
     goto __pyx_L3;
   }
 
-  /* "optionpricing_tte.pyx":26
+  /* "optionpricing_dte.pyx":26
  *         d1 = 1
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)             # <<<<<<<<<<<<<<
@@ -1869,7 +1869,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   }
   __pyx_L3:;
 
-  /* "optionpricing_tte.pyx":28
+  /* "optionpricing_dte.pyx":28
  *         d1 = calc_d1(forward, strike, iv, dte)
  * 
  *     x1 = norm.cdf(d1)             # <<<<<<<<<<<<<<
@@ -1927,7 +1927,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   __pyx_v_x1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":30
+  /* "optionpricing_dte.pyx":30
  *     x1 = norm.cdf(d1)
  * 
  *     if oType == 1:             # <<<<<<<<<<<<<<
@@ -1940,7 +1940,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "optionpricing_tte.pyx":31
+    /* "optionpricing_dte.pyx":31
  * 
  *     if oType == 1:
  *         delta = x1             # <<<<<<<<<<<<<<
@@ -1950,7 +1950,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
     __Pyx_INCREF(__pyx_v_x1);
     __pyx_v_delta = __pyx_v_x1;
 
-    /* "optionpricing_tte.pyx":30
+    /* "optionpricing_dte.pyx":30
  *     x1 = norm.cdf(d1)
  * 
  *     if oType == 1:             # <<<<<<<<<<<<<<
@@ -1960,7 +1960,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
     goto __pyx_L4;
   }
 
-  /* "optionpricing_tte.pyx":32
+  /* "optionpricing_dte.pyx":32
  *     if oType == 1:
  *         delta = x1
  *     elif oType == 2:             # <<<<<<<<<<<<<<
@@ -1973,7 +1973,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "optionpricing_tte.pyx":33
+    /* "optionpricing_dte.pyx":33
  *         delta = x1
  *     elif oType == 2:
  *         delta = x1 - 1             # <<<<<<<<<<<<<<
@@ -1985,7 +1985,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
     __pyx_v_delta = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":32
+    /* "optionpricing_dte.pyx":32
  *     if oType == 1:
  *         delta = x1
  *     elif oType == 2:             # <<<<<<<<<<<<<<
@@ -1995,7 +1995,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
     goto __pyx_L4;
   }
 
-  /* "optionpricing_tte.pyx":35
+  /* "optionpricing_dte.pyx":35
  *         delta = x1 - 1
  *     else:
  *         print 'Error - Option type not recognized: ', oType             # <<<<<<<<<<<<<<
@@ -2014,7 +2014,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
     if (__Pyx_Print(0, __pyx_t_1, 1) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":36
+    /* "optionpricing_dte.pyx":36
  *     else:
  *         print 'Error - Option type not recognized: ', oType
  *         return None             # <<<<<<<<<<<<<<
@@ -2028,7 +2028,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   }
   __pyx_L4:;
 
-  /* "optionpricing_tte.pyx":38
+  /* "optionpricing_dte.pyx":38
  *         return None
  * 
  *     return delta             # <<<<<<<<<<<<<<
@@ -2040,7 +2040,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   __pyx_r = __pyx_v_delta;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":22
+  /* "optionpricing_dte.pyx":22
  *     return d2
  * 
  * def calc_delta(forward, strike, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -2054,7 +2054,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("optionpricing_tte.calc_delta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_delta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_d1);
@@ -2065,7 +2065,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":40
+/* "optionpricing_dte.pyx":40
  *     return delta
  * 
  * def calc_gamma(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -2074,9 +2074,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_4calc_delta(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_7calc_gamma(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_7calc_gamma = {"calc_gamma", (PyCFunction)__pyx_pw_17optionpricing_tte_7calc_gamma, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_7calc_gamma(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_7calc_gamma(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_7calc_gamma = {"calc_gamma", (PyCFunction)__pyx_pw_17optionpricing_dte_7calc_gamma, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_7calc_gamma(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_iv = 0;
@@ -2139,18 +2139,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_7calc_gamma(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_gamma", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 40, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_gamma", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_gamma", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_6calc_gamma(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
+  __pyx_r = __pyx_pf_17optionpricing_dte_6calc_gamma(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
+static PyObject *__pyx_pf_17optionpricing_dte_6calc_gamma(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
   PyObject *__pyx_v_gamma = NULL;
   PyObject *__pyx_v_d1 = NULL;
   PyObject *__pyx_r = NULL;
@@ -2167,7 +2167,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("calc_gamma", 0);
 
-  /* "optionpricing_tte.pyx":41
+  /* "optionpricing_dte.pyx":41
  * 
  * def calc_gamma(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:             # <<<<<<<<<<<<<<
@@ -2189,7 +2189,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "optionpricing_tte.pyx":42
+    /* "optionpricing_dte.pyx":42
  * def calc_gamma(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:
  *         gamma = 0             # <<<<<<<<<<<<<<
@@ -2199,7 +2199,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
     __Pyx_INCREF(__pyx_int_0);
     __pyx_v_gamma = __pyx_int_0;
 
-    /* "optionpricing_tte.pyx":41
+    /* "optionpricing_dte.pyx":41
  * 
  * def calc_gamma(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:             # <<<<<<<<<<<<<<
@@ -2209,11 +2209,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
     goto __pyx_L3;
   }
 
-  /* "optionpricing_tte.pyx":44
+  /* "optionpricing_dte.pyx":44
  *         gamma = 0
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)             # <<<<<<<<<<<<<<
- *         gamma = norm.pdf(d1) / (forward * iv * sqrt(dte/252))
+ *         gamma = norm.pdf(d1) / (forward * iv * sqrt(dte/365))
  * 
  */
   /*else*/ {
@@ -2273,10 +2273,10 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
     __pyx_v_d1 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "optionpricing_tte.pyx":45
+    /* "optionpricing_dte.pyx":45
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)
- *         gamma = norm.pdf(d1) / (forward * iv * sqrt(dte/252))             # <<<<<<<<<<<<<<
+ *         gamma = norm.pdf(d1) / (forward * iv * sqrt(dte/365))             # <<<<<<<<<<<<<<
  * 
  *     return gamma
  */
@@ -2332,7 +2332,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
     __Pyx_GOTREF(__pyx_t_7);
     __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 45, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_8 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 45, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 45, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __pyx_t_9 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -2393,8 +2393,8 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
   }
   __pyx_L3:;
 
-  /* "optionpricing_tte.pyx":47
- *         gamma = norm.pdf(d1) / (forward * iv * sqrt(dte/252))
+  /* "optionpricing_dte.pyx":47
+ *         gamma = norm.pdf(d1) / (forward * iv * sqrt(dte/365))
  * 
  *     return gamma             # <<<<<<<<<<<<<<
  * 
@@ -2405,7 +2405,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
   __pyx_r = __pyx_v_gamma;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":40
+  /* "optionpricing_dte.pyx":40
  *     return delta
  * 
  * def calc_gamma(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -2422,7 +2422,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("optionpricing_tte.calc_gamma", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_gamma", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_gamma);
@@ -2432,7 +2432,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":49
+/* "optionpricing_dte.pyx":49
  *     return gamma
  * 
  * def calc_theta(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -2441,9 +2441,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_6calc_gamma(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_9calc_theta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_9calc_theta = {"calc_theta", (PyCFunction)__pyx_pw_17optionpricing_tte_9calc_theta, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_9calc_theta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_9calc_theta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_9calc_theta = {"calc_theta", (PyCFunction)__pyx_pw_17optionpricing_dte_9calc_theta, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_9calc_theta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_iv = 0;
@@ -2506,18 +2506,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_9calc_theta(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_theta", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 49, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_theta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_theta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_8calc_theta(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
+  __pyx_r = __pyx_pf_17optionpricing_dte_8calc_theta(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
+static PyObject *__pyx_pf_17optionpricing_dte_8calc_theta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
   PyObject *__pyx_v_theta = NULL;
   PyObject *__pyx_v_d1 = NULL;
   PyObject *__pyx_r = NULL;
@@ -2533,7 +2533,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_9 = NULL;
   __Pyx_RefNannySetupContext("calc_theta", 0);
 
-  /* "optionpricing_tte.pyx":50
+  /* "optionpricing_dte.pyx":50
  * 
  * def calc_theta(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:             # <<<<<<<<<<<<<<
@@ -2555,7 +2555,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "optionpricing_tte.pyx":51
+    /* "optionpricing_dte.pyx":51
  * def calc_theta(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:
  *         theta = 0             # <<<<<<<<<<<<<<
@@ -2565,7 +2565,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
     __Pyx_INCREF(__pyx_int_0);
     __pyx_v_theta = __pyx_int_0;
 
-    /* "optionpricing_tte.pyx":50
+    /* "optionpricing_dte.pyx":50
  * 
  * def calc_theta(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:             # <<<<<<<<<<<<<<
@@ -2575,11 +2575,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
     goto __pyx_L3;
   }
 
-  /* "optionpricing_tte.pyx":53
+  /* "optionpricing_dte.pyx":53
  *         theta = 0
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)             # <<<<<<<<<<<<<<
- *         theta = -forward * norm.pdf(d1) * iv / (2*sqrt(dte/252)) / 252
+ *         theta = -forward * norm.pdf(d1) * iv / (2*sqrt(dte/365)) / 365
  * 
  */
   /*else*/ {
@@ -2639,10 +2639,10 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
     __pyx_v_d1 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "optionpricing_tte.pyx":54
+    /* "optionpricing_dte.pyx":54
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)
- *         theta = -forward * norm.pdf(d1) * iv / (2*sqrt(dte/252)) / 252             # <<<<<<<<<<<<<<
+ *         theta = -forward * norm.pdf(d1) * iv / (2*sqrt(dte/365)) / 365             # <<<<<<<<<<<<<<
  * 
  *     return theta
  */
@@ -2705,7 +2705,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_8 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -2760,7 +2760,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyInt_TrueDivideObjC(__pyx_t_5, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_TrueDivideObjC(__pyx_t_5, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_theta = __pyx_t_2;
@@ -2768,8 +2768,8 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
   }
   __pyx_L3:;
 
-  /* "optionpricing_tte.pyx":56
- *         theta = -forward * norm.pdf(d1) * iv / (2*sqrt(dte/252)) / 252
+  /* "optionpricing_dte.pyx":56
+ *         theta = -forward * norm.pdf(d1) * iv / (2*sqrt(dte/365)) / 365
  * 
  *     return theta             # <<<<<<<<<<<<<<
  * 
@@ -2780,7 +2780,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
   __pyx_r = __pyx_v_theta;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":49
+  /* "optionpricing_dte.pyx":49
  *     return gamma
  * 
  * def calc_theta(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -2796,7 +2796,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("optionpricing_tte.calc_theta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_theta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_theta);
@@ -2806,7 +2806,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":58
+/* "optionpricing_dte.pyx":58
  *     return theta
  * 
  * def calc_vega(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -2815,9 +2815,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_8calc_theta(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_11calc_vega(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_11calc_vega = {"calc_vega", (PyCFunction)__pyx_pw_17optionpricing_tte_11calc_vega, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_11calc_vega(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_11calc_vega(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_11calc_vega = {"calc_vega", (PyCFunction)__pyx_pw_17optionpricing_dte_11calc_vega, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_11calc_vega(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_iv = 0;
@@ -2880,18 +2880,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_11calc_vega(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_vega", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 58, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_vega", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_vega", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_10calc_vega(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
+  __pyx_r = __pyx_pf_17optionpricing_dte_10calc_vega(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
+static PyObject *__pyx_pf_17optionpricing_dte_10calc_vega(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
   PyObject *__pyx_v_vega = NULL;
   PyObject *__pyx_v_d1 = NULL;
   PyObject *__pyx_r = NULL;
@@ -2907,7 +2907,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_9 = NULL;
   __Pyx_RefNannySetupContext("calc_vega", 0);
 
-  /* "optionpricing_tte.pyx":59
+  /* "optionpricing_dte.pyx":59
  * 
  * def calc_vega(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:             # <<<<<<<<<<<<<<
@@ -2929,7 +2929,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "optionpricing_tte.pyx":60
+    /* "optionpricing_dte.pyx":60
  * def calc_vega(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:
  *         vega = 0             # <<<<<<<<<<<<<<
@@ -2939,7 +2939,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
     __Pyx_INCREF(__pyx_int_0);
     __pyx_v_vega = __pyx_int_0;
 
-    /* "optionpricing_tte.pyx":59
+    /* "optionpricing_dte.pyx":59
  * 
  * def calc_vega(forward, strike, iv, dte):
  *     if iv <= 0 or dte <= 0:             # <<<<<<<<<<<<<<
@@ -2949,11 +2949,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
     goto __pyx_L3;
   }
 
-  /* "optionpricing_tte.pyx":62
+  /* "optionpricing_dte.pyx":62
  *         vega = 0
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)             # <<<<<<<<<<<<<<
- *         vega = forward * norm.pdf(d1) * sqrt(dte/252) / 100
+ *         vega = forward * norm.pdf(d1) * sqrt(dte/365) / 100
  * 
  */
   /*else*/ {
@@ -3013,10 +3013,10 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
     __pyx_v_d1 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "optionpricing_tte.pyx":63
+    /* "optionpricing_dte.pyx":63
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)
- *         vega = forward * norm.pdf(d1) * sqrt(dte/252) / 100             # <<<<<<<<<<<<<<
+ *         vega = forward * norm.pdf(d1) * sqrt(dte/365) / 100             # <<<<<<<<<<<<<<
  * 
  *     return vega
  */
@@ -3073,7 +3073,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 63, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 63, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_8 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
@@ -3133,8 +3133,8 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
   }
   __pyx_L3:;
 
-  /* "optionpricing_tte.pyx":65
- *         vega = forward * norm.pdf(d1) * sqrt(dte/252) / 100
+  /* "optionpricing_dte.pyx":65
+ *         vega = forward * norm.pdf(d1) * sqrt(dte/365) / 100
  * 
  *     return vega             # <<<<<<<<<<<<<<
  * 
@@ -3145,7 +3145,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
   __pyx_r = __pyx_v_vega;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":58
+  /* "optionpricing_dte.pyx":58
  *     return theta
  * 
  * def calc_vega(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -3161,7 +3161,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("optionpricing_tte.calc_vega", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_vega", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_vega);
@@ -3171,7 +3171,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":67
+/* "optionpricing_dte.pyx":67
  *     return vega
  * 
  * def calc_charm(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -3180,9 +3180,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_10calc_vega(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_13calc_charm(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_13calc_charm = {"calc_charm", (PyCFunction)__pyx_pw_17optionpricing_tte_13calc_charm, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_13calc_charm(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_13calc_charm(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_13calc_charm = {"calc_charm", (PyCFunction)__pyx_pw_17optionpricing_dte_13calc_charm, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_13calc_charm(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_iv = 0;
@@ -3245,18 +3245,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_13calc_charm(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_charm", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 67, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_charm", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_charm", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_12calc_charm(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
+  __pyx_r = __pyx_pf_17optionpricing_dte_12calc_charm(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
+static PyObject *__pyx_pf_17optionpricing_dte_12calc_charm(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte) {
   PyObject *__pyx_v_d1 = NULL;
   PyObject *__pyx_v_d2 = NULL;
   PyObject *__pyx_v_charm = NULL;
@@ -3272,12 +3272,12 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("calc_charm", 0);
 
-  /* "optionpricing_tte.pyx":68
+  /* "optionpricing_dte.pyx":68
  * 
  * def calc_charm(forward, strike, iv, dte):
  *     d1 = calc_d1(forward, strike, iv, dte)             # <<<<<<<<<<<<<<
  *     d2 = calc_d2(forward, strike, iv, dte)
- *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/252)) \
+ *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/365)) \
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_calc_d1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -3335,12 +3335,12 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   __pyx_v_d1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":69
+  /* "optionpricing_dte.pyx":69
  * def calc_charm(forward, strike, iv, dte):
  *     d1 = calc_d1(forward, strike, iv, dte)
  *     d2 = calc_d2(forward, strike, iv, dte)             # <<<<<<<<<<<<<<
- *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/252)) \
- *             / (2 * dte/252 * iv* sqrt(dte/252)) / 252
+ *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/365)) \
+ *             / (2 * dte/365 * iv* sqrt(dte/365)) / 365
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_calc_d2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -3398,11 +3398,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   __pyx_v_d2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":70
+  /* "optionpricing_dte.pyx":70
  *     d1 = calc_d1(forward, strike, iv, dte)
  *     d2 = calc_d2(forward, strike, iv, dte)
- *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/252)) \             # <<<<<<<<<<<<<<
- *             / (2 * dte/252 * iv* sqrt(dte/252)) / 252
+ *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/365)) \             # <<<<<<<<<<<<<<
+ *             / (2 * dte/365 * iv* sqrt(dte/365)) / 365
  *     return charm
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_norm); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
@@ -3463,7 +3463,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_6 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3520,16 +3520,16 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "optionpricing_tte.pyx":71
+  /* "optionpricing_dte.pyx":71
  *     d2 = calc_d2(forward, strike, iv, dte)
- *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/252)) \
- *             / (2 * dte/252 * iv* sqrt(dte/252)) / 252             # <<<<<<<<<<<<<<
+ *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/365)) \
+ *             / (2 * dte/365 * iv* sqrt(dte/365)) / 365             # <<<<<<<<<<<<<<
  *     return charm
  * 
  */
   __pyx_t_2 = PyNumber_Multiply(__pyx_int_2, __pyx_v_dte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_t_2, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_t_2, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = PyNumber_Multiply(__pyx_t_3, __pyx_v_iv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
@@ -3537,7 +3537,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_8 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
@@ -3593,15 +3593,15 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_TrueDivideObjC(__pyx_t_3, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_TrueDivideObjC(__pyx_t_3, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_charm = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "optionpricing_tte.pyx":72
- *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/252)) \
- *             / (2 * dte/252 * iv* sqrt(dte/252)) / 252
+  /* "optionpricing_dte.pyx":72
+ *     charm = -norm.pdf(d1) * (-d2 * iv * sqrt(dte/365)) \
+ *             / (2 * dte/365 * iv* sqrt(dte/365)) / 365
  *     return charm             # <<<<<<<<<<<<<<
  * 
  * def calc_deltatostrike(forward, delta, iv, dte, oType):
@@ -3611,7 +3611,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_charm;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":67
+  /* "optionpricing_dte.pyx":67
  *     return vega
  * 
  * def calc_charm(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -3628,7 +3628,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("optionpricing_tte.calc_charm", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_charm", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_d1);
@@ -3639,7 +3639,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":74
+/* "optionpricing_dte.pyx":74
  *     return charm
  * 
  * def calc_deltatostrike(forward, delta, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -3648,9 +3648,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_12calc_charm(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_15calc_deltatostrike(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_15calc_deltatostrike = {"calc_deltatostrike", (PyCFunction)__pyx_pw_17optionpricing_tte_15calc_deltatostrike, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_15calc_deltatostrike(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_15calc_deltatostrike(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_15calc_deltatostrike = {"calc_deltatostrike", (PyCFunction)__pyx_pw_17optionpricing_dte_15calc_deltatostrike, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_15calc_deltatostrike(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_delta = 0;
   PyObject *__pyx_v_iv = 0;
@@ -3722,18 +3722,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_15calc_deltatostrike(PyObject *__p
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_deltatostrike", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 74, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_deltatostrike", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_deltatostrike", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_14calc_deltatostrike(__pyx_self, __pyx_v_forward, __pyx_v_delta, __pyx_v_iv, __pyx_v_dte, __pyx_v_oType);
+  __pyx_r = __pyx_pf_17optionpricing_dte_14calc_deltatostrike(__pyx_self, __pyx_v_forward, __pyx_v_delta, __pyx_v_iv, __pyx_v_dte, __pyx_v_oType);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_delta, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType) {
+static PyObject *__pyx_pf_17optionpricing_dte_14calc_deltatostrike(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_delta, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType) {
   PyObject *__pyx_v_strike = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3750,7 +3750,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __Pyx_RefNannySetupContext("calc_deltatostrike", 0);
   __Pyx_INCREF(__pyx_v_delta);
 
-  /* "optionpricing_tte.pyx":75
+  /* "optionpricing_dte.pyx":75
  * 
  * def calc_deltatostrike(forward, delta, iv, dte, oType):
  *     if delta > 1:             # <<<<<<<<<<<<<<
@@ -3762,7 +3762,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "optionpricing_tte.pyx":76
+    /* "optionpricing_dte.pyx":76
  * def calc_deltatostrike(forward, delta, iv, dte, oType):
  *     if delta > 1:
  *         delta = delta / 100             # <<<<<<<<<<<<<<
@@ -3774,7 +3774,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
     __Pyx_DECREF_SET(__pyx_v_delta, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":75
+    /* "optionpricing_dte.pyx":75
  * 
  * def calc_deltatostrike(forward, delta, iv, dte, oType):
  *     if delta > 1:             # <<<<<<<<<<<<<<
@@ -3784,7 +3784,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
     goto __pyx_L3;
   }
 
-  /* "optionpricing_tte.pyx":78
+  /* "optionpricing_dte.pyx":78
  *         delta = delta / 100
  *     else:
  *         delta = delta             # <<<<<<<<<<<<<<
@@ -3797,7 +3797,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   }
   __pyx_L3:;
 
-  /* "optionpricing_tte.pyx":80
+  /* "optionpricing_dte.pyx":80
  *         delta = delta
  * 
  *     if oType == 1:             # <<<<<<<<<<<<<<
@@ -3810,7 +3810,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "optionpricing_tte.pyx":81
+    /* "optionpricing_dte.pyx":81
  * 
  *     if oType == 1:
  *         delta = delta             # <<<<<<<<<<<<<<
@@ -3820,7 +3820,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
     __Pyx_INCREF(__pyx_v_delta);
     __Pyx_DECREF_SET(__pyx_v_delta, __pyx_v_delta);
 
-    /* "optionpricing_tte.pyx":80
+    /* "optionpricing_dte.pyx":80
  *         delta = delta
  * 
  *     if oType == 1:             # <<<<<<<<<<<<<<
@@ -3830,7 +3830,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
     goto __pyx_L4;
   }
 
-  /* "optionpricing_tte.pyx":82
+  /* "optionpricing_dte.pyx":82
  *     if oType == 1:
  *         delta = delta
  *     elif oType == 2:             # <<<<<<<<<<<<<<
@@ -3843,7 +3843,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "optionpricing_tte.pyx":83
+    /* "optionpricing_dte.pyx":83
  *         delta = delta
  *     elif oType == 2:
  *         delta = -delta             # <<<<<<<<<<<<<<
@@ -3855,7 +3855,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
     __Pyx_DECREF_SET(__pyx_v_delta, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":82
+    /* "optionpricing_dte.pyx":82
  *     if oType == 1:
  *         delta = delta
  *     elif oType == 2:             # <<<<<<<<<<<<<<
@@ -3865,7 +3865,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
     goto __pyx_L4;
   }
 
-  /* "optionpricing_tte.pyx":85
+  /* "optionpricing_dte.pyx":85
  *         delta = -delta
  *     else:
  *         print 'Error - Option Type not recognized: ', oType             # <<<<<<<<<<<<<<
@@ -3884,12 +3884,12 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
     if (__Pyx_Print(0, __pyx_t_1, 1) < 0) __PYX_ERR(0, 85, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":86
+    /* "optionpricing_dte.pyx":86
  *     else:
  *         print 'Error - Option Type not recognized: ', oType
  *         return None             # <<<<<<<<<<<<<<
  * 
- *     strike = forward * exp(-iv * sqrt(dte/252) * (norm.ppf(delta) \
+ *     strike = forward * exp(-iv * sqrt(dte/365) * (norm.ppf(delta) \
  */
     __Pyx_XDECREF(__pyx_r);
     __Pyx_INCREF(Py_None);
@@ -3898,11 +3898,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   }
   __pyx_L4:;
 
-  /* "optionpricing_tte.pyx":88
+  /* "optionpricing_dte.pyx":88
  *         return None
  * 
- *     strike = forward * exp(-iv * sqrt(dte/252) * (norm.ppf(delta) \             # <<<<<<<<<<<<<<
- *              - iv * sqrt(dte/252) / 2))
+ *     strike = forward * exp(-iv * sqrt(dte/365) * (norm.ppf(delta) \             # <<<<<<<<<<<<<<
+ *              - iv * sqrt(dte/365) / 2))
  * 
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_exp); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
@@ -3911,7 +3911,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_t_8 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
@@ -4012,16 +4012,16 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   }
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "optionpricing_tte.pyx":89
+  /* "optionpricing_dte.pyx":89
  * 
- *     strike = forward * exp(-iv * sqrt(dte/252) * (norm.ppf(delta) \
- *              - iv * sqrt(dte/252) / 2))             # <<<<<<<<<<<<<<
+ *     strike = forward * exp(-iv * sqrt(dte/365) * (norm.ppf(delta) \
+ *              - iv * sqrt(dte/365) / 2))             # <<<<<<<<<<<<<<
  * 
  *     return strike
  */
   __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_sqrt); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_4 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 89, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_TrueDivideObjC(__pyx_v_dte, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_8 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_7))) {
@@ -4080,11 +4080,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "optionpricing_tte.pyx":88
+  /* "optionpricing_dte.pyx":88
  *         return None
  * 
- *     strike = forward * exp(-iv * sqrt(dte/252) * (norm.ppf(delta) \             # <<<<<<<<<<<<<<
- *              - iv * sqrt(dte/252) / 2))
+ *     strike = forward * exp(-iv * sqrt(dte/365) * (norm.ppf(delta) \             # <<<<<<<<<<<<<<
+ *              - iv * sqrt(dte/365) / 2))
  * 
  */
   __pyx_t_9 = PyNumber_Multiply(__pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 88, __pyx_L1_error)
@@ -4143,8 +4143,8 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __pyx_v_strike = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "optionpricing_tte.pyx":91
- *              - iv * sqrt(dte/252) / 2))
+  /* "optionpricing_dte.pyx":91
+ *              - iv * sqrt(dte/365) / 2))
  * 
  *     return strike             # <<<<<<<<<<<<<<
  * 
@@ -4155,7 +4155,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __pyx_r = __pyx_v_strike;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":74
+  /* "optionpricing_dte.pyx":74
  *     return charm
  * 
  * def calc_deltatostrike(forward, delta, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -4174,7 +4174,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("optionpricing_tte.calc_deltatostrike", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_deltatostrike", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_strike);
@@ -4184,7 +4184,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":93
+/* "optionpricing_dte.pyx":93
  *     return strike
  * 
  * def calc_intrinsic(forward, strike, oType):             # <<<<<<<<<<<<<<
@@ -4193,9 +4193,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_14calc_deltatostrike(CYTHON_UNUSED
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_17calc_intrinsic(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_17calc_intrinsic = {"calc_intrinsic", (PyCFunction)__pyx_pw_17optionpricing_tte_17calc_intrinsic, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_17calc_intrinsic(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_17calc_intrinsic(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_17calc_intrinsic = {"calc_intrinsic", (PyCFunction)__pyx_pw_17optionpricing_dte_17calc_intrinsic, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_17calc_intrinsic(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_oType = 0;
@@ -4249,18 +4249,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_17calc_intrinsic(PyObject *__pyx_s
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_intrinsic", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 93, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_intrinsic", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_intrinsic", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_16calc_intrinsic(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_oType);
+  __pyx_r = __pyx_pf_17optionpricing_dte_16calc_intrinsic(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_oType);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_oType) {
+static PyObject *__pyx_pf_17optionpricing_dte_16calc_intrinsic(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_oType) {
   PyObject *__pyx_v_intrinsic = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4268,7 +4268,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("calc_intrinsic", 0);
 
-  /* "optionpricing_tte.pyx":94
+  /* "optionpricing_dte.pyx":94
  * 
  * def calc_intrinsic(forward, strike, oType):
  *     if oType == 1:             # <<<<<<<<<<<<<<
@@ -4281,7 +4281,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "optionpricing_tte.pyx":95
+    /* "optionpricing_dte.pyx":95
  * def calc_intrinsic(forward, strike, oType):
  *     if oType == 1:
  *         if forward > strike:             # <<<<<<<<<<<<<<
@@ -4293,7 +4293,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_2) {
 
-      /* "optionpricing_tte.pyx":96
+      /* "optionpricing_dte.pyx":96
  *     if oType == 1:
  *         if forward > strike:
  *             intrinsic = forward - strike             # <<<<<<<<<<<<<<
@@ -4305,7 +4305,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
       __pyx_v_intrinsic = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "optionpricing_tte.pyx":95
+      /* "optionpricing_dte.pyx":95
  * def calc_intrinsic(forward, strike, oType):
  *     if oType == 1:
  *         if forward > strike:             # <<<<<<<<<<<<<<
@@ -4315,7 +4315,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
       goto __pyx_L4;
     }
 
-    /* "optionpricing_tte.pyx":98
+    /* "optionpricing_dte.pyx":98
  *             intrinsic = forward - strike
  *         else:
  *             intrinsic = 0             # <<<<<<<<<<<<<<
@@ -4328,7 +4328,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
     }
     __pyx_L4:;
 
-    /* "optionpricing_tte.pyx":94
+    /* "optionpricing_dte.pyx":94
  * 
  * def calc_intrinsic(forward, strike, oType):
  *     if oType == 1:             # <<<<<<<<<<<<<<
@@ -4338,7 +4338,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
     goto __pyx_L3;
   }
 
-  /* "optionpricing_tte.pyx":100
+  /* "optionpricing_dte.pyx":100
  *             intrinsic = 0
  * 
  *     elif oType == 2:             # <<<<<<<<<<<<<<
@@ -4351,7 +4351,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "optionpricing_tte.pyx":101
+    /* "optionpricing_dte.pyx":101
  * 
  *     elif oType == 2:
  *         if forward < strike:             # <<<<<<<<<<<<<<
@@ -4363,7 +4363,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_2) {
 
-      /* "optionpricing_tte.pyx":102
+      /* "optionpricing_dte.pyx":102
  *     elif oType == 2:
  *         if forward < strike:
  *             intrinsic = strike - forward             # <<<<<<<<<<<<<<
@@ -4375,7 +4375,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
       __pyx_v_intrinsic = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "optionpricing_tte.pyx":101
+      /* "optionpricing_dte.pyx":101
  * 
  *     elif oType == 2:
  *         if forward < strike:             # <<<<<<<<<<<<<<
@@ -4385,7 +4385,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
       goto __pyx_L5;
     }
 
-    /* "optionpricing_tte.pyx":104
+    /* "optionpricing_dte.pyx":104
  *             intrinsic = strike - forward
  *         else:
  *             intrinsic = 0             # <<<<<<<<<<<<<<
@@ -4398,7 +4398,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
     }
     __pyx_L5:;
 
-    /* "optionpricing_tte.pyx":100
+    /* "optionpricing_dte.pyx":100
  *             intrinsic = 0
  * 
  *     elif oType == 2:             # <<<<<<<<<<<<<<
@@ -4408,7 +4408,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
     goto __pyx_L3;
   }
 
-  /* "optionpricing_tte.pyx":107
+  /* "optionpricing_dte.pyx":107
  * 
  *     else:
  *         print 'Error - Option Type not recognized: ', oType             # <<<<<<<<<<<<<<
@@ -4427,7 +4427,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
     if (__Pyx_Print(0, __pyx_t_1, 1) < 0) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":108
+    /* "optionpricing_dte.pyx":108
  *     else:
  *         print 'Error - Option Type not recognized: ', oType
  *         return None             # <<<<<<<<<<<<<<
@@ -4441,7 +4441,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
   }
   __pyx_L3:;
 
-  /* "optionpricing_tte.pyx":110
+  /* "optionpricing_dte.pyx":110
  *         return None
  * 
  *     return intrinsic             # <<<<<<<<<<<<<<
@@ -4453,7 +4453,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
   __pyx_r = __pyx_v_intrinsic;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":93
+  /* "optionpricing_dte.pyx":93
  *     return strike
  * 
  * def calc_intrinsic(forward, strike, oType):             # <<<<<<<<<<<<<<
@@ -4464,7 +4464,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("optionpricing_tte.calc_intrinsic", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_intrinsic", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_intrinsic);
@@ -4473,7 +4473,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":112
+/* "optionpricing_dte.pyx":112
  *     return intrinsic
  * 
  * def calc_price(forward, strike, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -4482,9 +4482,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_16calc_intrinsic(CYTHON_UNUSED PyO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_19calc_price(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_19calc_price = {"calc_price", (PyCFunction)__pyx_pw_17optionpricing_tte_19calc_price, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_19calc_price(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_19calc_price(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_19calc_price = {"calc_price", (PyCFunction)__pyx_pw_17optionpricing_dte_19calc_price, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_19calc_price(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_iv = 0;
@@ -4556,18 +4556,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_19calc_price(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_price", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 112, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_price", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_price", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_18calc_price(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte, __pyx_v_oType);
+  __pyx_r = __pyx_pf_17optionpricing_dte_18calc_price(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_iv, __pyx_v_dte, __pyx_v_oType);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType) {
+static PyObject *__pyx_pf_17optionpricing_dte_18calc_price(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_iv, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType) {
   PyObject *__pyx_v_price = NULL;
   PyObject *__pyx_v_d1 = NULL;
   PyObject *__pyx_v_d2 = NULL;
@@ -4584,7 +4584,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("calc_price", 0);
 
-  /* "optionpricing_tte.pyx":113
+  /* "optionpricing_dte.pyx":113
  * 
  * def calc_price(forward, strike, iv, dte, oType):
  *     if iv <= 0 or dte <= 0:             # <<<<<<<<<<<<<<
@@ -4606,7 +4606,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "optionpricing_tte.pyx":114
+    /* "optionpricing_dte.pyx":114
  * def calc_price(forward, strike, iv, dte, oType):
  *     if iv <= 0 or dte <= 0:
  *         price = calc_intrinsic(forward, strike, oType)             # <<<<<<<<<<<<<<
@@ -4666,7 +4666,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
     __pyx_v_price = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "optionpricing_tte.pyx":113
+    /* "optionpricing_dte.pyx":113
  * 
  * def calc_price(forward, strike, iv, dte, oType):
  *     if iv <= 0 or dte <= 0:             # <<<<<<<<<<<<<<
@@ -4676,7 +4676,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
     goto __pyx_L3;
   }
 
-  /* "optionpricing_tte.pyx":116
+  /* "optionpricing_dte.pyx":116
  *         price = calc_intrinsic(forward, strike, oType)
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)             # <<<<<<<<<<<<<<
@@ -4740,7 +4740,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
     __pyx_v_d1 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "optionpricing_tte.pyx":117
+    /* "optionpricing_dte.pyx":117
  *     else:
  *         d1 = calc_d1(forward, strike, iv, dte)
  *         d2 = calc_d2(forward, strike, iv, dte)             # <<<<<<<<<<<<<<
@@ -4803,7 +4803,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
     __pyx_v_d2 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "optionpricing_tte.pyx":118
+    /* "optionpricing_dte.pyx":118
  *         d1 = calc_d1(forward, strike, iv, dte)
  *         d2 = calc_d2(forward, strike, iv, dte)
  *         x1 = norm.cdf(d1)             # <<<<<<<<<<<<<<
@@ -4861,7 +4861,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
     __pyx_v_x1 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "optionpricing_tte.pyx":119
+    /* "optionpricing_dte.pyx":119
  *         d2 = calc_d2(forward, strike, iv, dte)
  *         x1 = norm.cdf(d1)
  *         x2 = norm.cdf(d2)             # <<<<<<<<<<<<<<
@@ -4919,7 +4919,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
     __pyx_v_x2 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "optionpricing_tte.pyx":121
+    /* "optionpricing_dte.pyx":121
  *         x2 = norm.cdf(d2)
  * 
  *         if oType == 1:             # <<<<<<<<<<<<<<
@@ -4932,7 +4932,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_1) {
 
-      /* "optionpricing_tte.pyx":122
+      /* "optionpricing_dte.pyx":122
  * 
  *         if oType == 1:
  *             price = forward * x1 - strike * x2             # <<<<<<<<<<<<<<
@@ -4950,7 +4950,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
       __pyx_v_price = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "optionpricing_tte.pyx":121
+      /* "optionpricing_dte.pyx":121
  *         x2 = norm.cdf(d2)
  * 
  *         if oType == 1:             # <<<<<<<<<<<<<<
@@ -4960,7 +4960,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
       goto __pyx_L6;
     }
 
-    /* "optionpricing_tte.pyx":123
+    /* "optionpricing_dte.pyx":123
  *         if oType == 1:
  *             price = forward * x1 - strike * x2
  *         elif oType == 2:             # <<<<<<<<<<<<<<
@@ -4973,7 +4973,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_1) {
 
-      /* "optionpricing_tte.pyx":124
+      /* "optionpricing_dte.pyx":124
  *             price = forward * x1 - strike * x2
  *         elif oType == 2:
  *             price = strike * (1 - x2) - forward *(1 - x1)             # <<<<<<<<<<<<<<
@@ -4997,7 +4997,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
       __pyx_v_price = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "optionpricing_tte.pyx":123
+      /* "optionpricing_dte.pyx":123
  *         if oType == 1:
  *             price = forward * x1 - strike * x2
  *         elif oType == 2:             # <<<<<<<<<<<<<<
@@ -5007,7 +5007,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
       goto __pyx_L6;
     }
 
-    /* "optionpricing_tte.pyx":126
+    /* "optionpricing_dte.pyx":126
  *             price = strike * (1 - x2) - forward *(1 - x1)
  *         else:
  *             print 'Error - Option Type %r not recognized.' % oType             # <<<<<<<<<<<<<<
@@ -5020,7 +5020,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
       if (__Pyx_PrintOne(0, __pyx_t_4) < 0) __PYX_ERR(0, 126, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "optionpricing_tte.pyx":127
+      /* "optionpricing_dte.pyx":127
  *         else:
  *             print 'Error - Option Type %r not recognized.' % oType
  *             return None             # <<<<<<<<<<<<<<
@@ -5036,7 +5036,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
   }
   __pyx_L3:;
 
-  /* "optionpricing_tte.pyx":129
+  /* "optionpricing_dte.pyx":129
  *             return None
  * 
  *     return price             # <<<<<<<<<<<<<<
@@ -5048,7 +5048,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_price;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":112
+  /* "optionpricing_dte.pyx":112
  *     return intrinsic
  * 
  * def calc_price(forward, strike, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -5062,7 +5062,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("optionpricing_tte.calc_price", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_price", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_price);
@@ -5075,18 +5075,18 @@ static PyObject *__pyx_pf_17optionpricing_tte_18calc_price(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":131
+/* "optionpricing_dte.pyx":131
  *     return price
  * 
  * def calc_forward(spotPrice, interestRate, divYield, dte):             # <<<<<<<<<<<<<<
- *     forward = spotPrice * exp((interestRate - divYield) * dte / 252)
+ *     forward = spotPrice * exp((interestRate - divYield) * dte / 365)
  *     return forward
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_21calc_forward(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17optionpricing_tte_21calc_forward = {"calc_forward", (PyCFunction)__pyx_pw_17optionpricing_tte_21calc_forward, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17optionpricing_tte_21calc_forward(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_21calc_forward(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_17optionpricing_dte_21calc_forward = {"calc_forward", (PyCFunction)__pyx_pw_17optionpricing_dte_21calc_forward, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_17optionpricing_dte_21calc_forward(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_spotPrice = 0;
   PyObject *__pyx_v_interestRate = 0;
   PyObject *__pyx_v_divYield = 0;
@@ -5149,18 +5149,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_21calc_forward(PyObject *__pyx_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_forward", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 131, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_forward", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_forward", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_20calc_forward(__pyx_self, __pyx_v_spotPrice, __pyx_v_interestRate, __pyx_v_divYield, __pyx_v_dte);
+  __pyx_r = __pyx_pf_17optionpricing_dte_20calc_forward(__pyx_self, __pyx_v_spotPrice, __pyx_v_interestRate, __pyx_v_divYield, __pyx_v_dte);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spotPrice, PyObject *__pyx_v_interestRate, PyObject *__pyx_v_divYield, PyObject *__pyx_v_dte) {
+static PyObject *__pyx_pf_17optionpricing_dte_20calc_forward(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_spotPrice, PyObject *__pyx_v_interestRate, PyObject *__pyx_v_divYield, PyObject *__pyx_v_dte) {
   PyObject *__pyx_v_forward = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -5171,10 +5171,10 @@ static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("calc_forward", 0);
 
-  /* "optionpricing_tte.pyx":132
+  /* "optionpricing_dte.pyx":132
  * 
  * def calc_forward(spotPrice, interestRate, divYield, dte):
- *     forward = spotPrice * exp((interestRate - divYield) * dte / 252)             # <<<<<<<<<<<<<<
+ *     forward = spotPrice * exp((interestRate - divYield) * dte / 365)             # <<<<<<<<<<<<<<
  *     return forward
  * 
  */
@@ -5185,7 +5185,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObj
   __pyx_t_4 = PyNumber_Multiply(__pyx_t_3, __pyx_v_dte); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_t_4, __pyx_int_252, 0xFC, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_TrueDivideObjC(__pyx_t_4, __pyx_int_365, 0x16D, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -5240,9 +5240,9 @@ static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObj
   __pyx_v_forward = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "optionpricing_tte.pyx":133
+  /* "optionpricing_dte.pyx":133
  * def calc_forward(spotPrice, interestRate, divYield, dte):
- *     forward = spotPrice * exp((interestRate - divYield) * dte / 252)
+ *     forward = spotPrice * exp((interestRate - divYield) * dte / 365)
  *     return forward             # <<<<<<<<<<<<<<
  * 
  * def calc_impliedvol(forward, strike, dte, oType, actualPrice):
@@ -5252,11 +5252,11 @@ static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObj
   __pyx_r = __pyx_v_forward;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":131
+  /* "optionpricing_dte.pyx":131
  *     return price
  * 
  * def calc_forward(spotPrice, interestRate, divYield, dte):             # <<<<<<<<<<<<<<
- *     forward = spotPrice * exp((interestRate - divYield) * dte / 252)
+ *     forward = spotPrice * exp((interestRate - divYield) * dte / 365)
  *     return forward
  */
 
@@ -5267,7 +5267,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("optionpricing_tte.calc_forward", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_forward", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_forward);
@@ -5276,7 +5276,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "optionpricing_tte.pyx":135
+/* "optionpricing_dte.pyx":135
  *     return forward
  * 
  * def calc_impliedvol(forward, strike, dte, oType, actualPrice):             # <<<<<<<<<<<<<<
@@ -5285,10 +5285,10 @@ static PyObject *__pyx_pf_17optionpricing_tte_20calc_forward(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17optionpricing_tte_23calc_impliedvol(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17optionpricing_tte_22calc_impliedvol[] = "Use bisection search to solve for the implied volatilty\n    of a given option ";
-static PyMethodDef __pyx_mdef_17optionpricing_tte_23calc_impliedvol = {"calc_impliedvol", (PyCFunction)__pyx_pw_17optionpricing_tte_23calc_impliedvol, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17optionpricing_tte_22calc_impliedvol};
-static PyObject *__pyx_pw_17optionpricing_tte_23calc_impliedvol(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_17optionpricing_dte_23calc_impliedvol(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_17optionpricing_dte_22calc_impliedvol[] = "Use bisection search to solve for the implied volatilty\n    of a given option ";
+static PyMethodDef __pyx_mdef_17optionpricing_dte_23calc_impliedvol = {"calc_impliedvol", (PyCFunction)__pyx_pw_17optionpricing_dte_23calc_impliedvol, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17optionpricing_dte_22calc_impliedvol};
+static PyObject *__pyx_pw_17optionpricing_dte_23calc_impliedvol(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_forward = 0;
   PyObject *__pyx_v_strike = 0;
   PyObject *__pyx_v_dte = 0;
@@ -5360,18 +5360,18 @@ static PyObject *__pyx_pw_17optionpricing_tte_23calc_impliedvol(PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("calc_impliedvol", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 135, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("optionpricing_tte.calc_impliedvol", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_impliedvol", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17optionpricing_tte_22calc_impliedvol(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_dte, __pyx_v_oType, __pyx_v_actualPrice);
+  __pyx_r = __pyx_pf_17optionpricing_dte_22calc_impliedvol(__pyx_self, __pyx_v_forward, __pyx_v_strike, __pyx_v_dte, __pyx_v_oType, __pyx_v_actualPrice);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType, PyObject *__pyx_v_actualPrice) {
+static PyObject *__pyx_pf_17optionpricing_dte_22calc_impliedvol(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_forward, PyObject *__pyx_v_strike, PyObject *__pyx_v_dte, PyObject *__pyx_v_oType, PyObject *__pyx_v_actualPrice) {
   double __pyx_v_tol;
   PyObject *__pyx_v_nIter = NULL;
   PyObject *__pyx_v_volUB = NULL;
@@ -5391,7 +5391,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("calc_impliedvol", 0);
 
-  /* "optionpricing_tte.pyx":138
+  /* "optionpricing_dte.pyx":138
  *     """Use bisection search to solve for the implied volatilty
  *     of a given option """
  *     tol = 0.0000000001             # <<<<<<<<<<<<<<
@@ -5400,7 +5400,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
  */
   __pyx_v_tol = 0.0000000001;
 
-  /* "optionpricing_tte.pyx":139
+  /* "optionpricing_dte.pyx":139
  *     of a given option """
  *     tol = 0.0000000001
  *     nIter = 0             # <<<<<<<<<<<<<<
@@ -5410,7 +5410,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_nIter = __pyx_int_0;
 
-  /* "optionpricing_tte.pyx":141
+  /* "optionpricing_dte.pyx":141
  *     nIter = 0
  * 
  *     volUB, volLB = 10, 0             # <<<<<<<<<<<<<<
@@ -5426,7 +5426,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   __pyx_v_volLB = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "optionpricing_tte.pyx":142
+  /* "optionpricing_dte.pyx":142
  * 
  *     volUB, volLB = 10, 0
  *     volMD = (volUB + volLB) / 2             # <<<<<<<<<<<<<<
@@ -5441,7 +5441,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   __pyx_v_volMD = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":144
+  /* "optionpricing_dte.pyx":144
  *     volMD = (volUB + volLB) / 2
  * 
  *     priceUB = calc_price(forward, strike, volUB, dte, oType)             # <<<<<<<<<<<<<<
@@ -5507,7 +5507,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   __pyx_v_priceUB = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":145
+  /* "optionpricing_dte.pyx":145
  * 
  *     priceUB = calc_price(forward, strike, volUB, dte, oType)
  *     priceLB = calc_price(forward, strike, volLB, dte, oType)             # <<<<<<<<<<<<<<
@@ -5573,7 +5573,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   __pyx_v_priceLB = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":146
+  /* "optionpricing_dte.pyx":146
  *     priceUB = calc_price(forward, strike, volUB, dte, oType)
  *     priceLB = calc_price(forward, strike, volLB, dte, oType)
  *     priceMD = calc_price(forward, strike, volMD, dte, oType)             # <<<<<<<<<<<<<<
@@ -5639,7 +5639,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   __pyx_v_priceMD = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":148
+  /* "optionpricing_dte.pyx":148
  *     priceMD = calc_price(forward, strike, volMD, dte, oType)
  * 
  *     while abs(actualPrice - priceMD) > tol and nIter < 100:             # <<<<<<<<<<<<<<
@@ -5671,7 +5671,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
     __pyx_L5_bool_binop_done:;
     if (!__pyx_t_6) break;
 
-    /* "optionpricing_tte.pyx":149
+    /* "optionpricing_dte.pyx":149
  * 
  *     while abs(actualPrice - priceMD) > tol and nIter < 100:
  *         if priceMD <= actualPrice:             # <<<<<<<<<<<<<<
@@ -5683,7 +5683,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_6) {
 
-      /* "optionpricing_tte.pyx":150
+      /* "optionpricing_dte.pyx":150
  *     while abs(actualPrice - priceMD) > tol and nIter < 100:
  *         if priceMD <= actualPrice:
  *             volLB = volMD             # <<<<<<<<<<<<<<
@@ -5693,7 +5693,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
       __Pyx_INCREF(__pyx_v_volMD);
       __Pyx_DECREF_SET(__pyx_v_volLB, __pyx_v_volMD);
 
-      /* "optionpricing_tte.pyx":149
+      /* "optionpricing_dte.pyx":149
  * 
  *     while abs(actualPrice - priceMD) > tol and nIter < 100:
  *         if priceMD <= actualPrice:             # <<<<<<<<<<<<<<
@@ -5703,7 +5703,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
       goto __pyx_L7;
     }
 
-    /* "optionpricing_tte.pyx":152
+    /* "optionpricing_dte.pyx":152
  *             volLB = volMD
  *         else:
  *             volUB = volMD             # <<<<<<<<<<<<<<
@@ -5716,7 +5716,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
     }
     __pyx_L7:;
 
-    /* "optionpricing_tte.pyx":154
+    /* "optionpricing_dte.pyx":154
  *             volUB = volMD
  * 
  *         volMD = (volUB + volLB) / 2             # <<<<<<<<<<<<<<
@@ -5731,7 +5731,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
     __Pyx_DECREF_SET(__pyx_v_volMD, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":155
+    /* "optionpricing_dte.pyx":155
  * 
  *         volMD = (volUB + volLB) / 2
  *         priceMD = calc_price(forward, strike, volMD, dte, oType)             # <<<<<<<<<<<<<<
@@ -5797,7 +5797,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
     __Pyx_DECREF_SET(__pyx_v_priceMD, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":156
+    /* "optionpricing_dte.pyx":156
  *         volMD = (volUB + volLB) / 2
  *         priceMD = calc_price(forward, strike, volMD, dte, oType)
  *         nIter += 1             # <<<<<<<<<<<<<<
@@ -5810,7 +5810,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
     __pyx_t_1 = 0;
   }
 
-  /* "optionpricing_tte.pyx":158
+  /* "optionpricing_dte.pyx":158
  *         nIter += 1
  * 
  *     if nIter >= 100:             # <<<<<<<<<<<<<<
@@ -5822,7 +5822,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "optionpricing_tte.pyx":159
+    /* "optionpricing_dte.pyx":159
  * 
  *     if nIter >= 100:
  *         print '\n\t Max. iterations (%r) exceeded.' % nIter             # <<<<<<<<<<<<<<
@@ -5834,7 +5834,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
     if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 159, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "optionpricing_tte.pyx":158
+    /* "optionpricing_dte.pyx":158
  *         nIter += 1
  * 
  *     if nIter >= 100:             # <<<<<<<<<<<<<<
@@ -5843,19 +5843,17 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
  */
   }
 
-  /* "optionpricing_tte.pyx":161
+  /* "optionpricing_dte.pyx":161
  *         print '\n\t Max. iterations (%r) exceeded.' % nIter
  * 
  *     return volMD             # <<<<<<<<<<<<<<
- * 
- * # def test():
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_volMD);
   __pyx_r = __pyx_v_volMD;
   goto __pyx_L0;
 
-  /* "optionpricing_tte.pyx":135
+  /* "optionpricing_dte.pyx":135
  *     return forward
  * 
  * def calc_impliedvol(forward, strike, dte, oType, actualPrice):             # <<<<<<<<<<<<<<
@@ -5869,7 +5867,7 @@ static PyObject *__pyx_pf_17optionpricing_tte_22calc_impliedvol(CYTHON_UNUSED Py
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("optionpricing_tte.calc_impliedvol", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("optionpricing_dte.calc_impliedvol", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nIter);
@@ -5895,7 +5893,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "optionpricing_tte",
+    "optionpricing_dte",
     __pyx_k_Black_Model_equations_for_calcu, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -5947,7 +5945,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_nIter, __pyx_k_nIter, sizeof(__pyx_k_nIter), 0, 0, 1, 1},
   {&__pyx_n_s_norm, __pyx_k_norm, sizeof(__pyx_k_norm), 0, 0, 1, 1},
   {&__pyx_n_s_oType, __pyx_k_oType, sizeof(__pyx_k_oType), 0, 0, 1, 1},
-  {&__pyx_n_s_optionpricing_tte, __pyx_k_optionpricing_tte, sizeof(__pyx_k_optionpricing_tte), 0, 0, 1, 1},
+  {&__pyx_n_s_optionpricing_dte, __pyx_k_optionpricing_dte, sizeof(__pyx_k_optionpricing_dte), 0, 0, 1, 1},
   {&__pyx_n_s_pdf, __pyx_k_pdf, sizeof(__pyx_k_pdf), 0, 0, 1, 1},
   {&__pyx_n_s_ppf, __pyx_k_ppf, sizeof(__pyx_k_ppf), 0, 0, 1, 1},
   {&__pyx_n_s_price, __pyx_k_price, sizeof(__pyx_k_price), 0, 0, 1, 1},
@@ -5978,31 +5976,31 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "optionpricing_tte.pyx":12
+  /* "optionpricing_dte.pyx":12
  * from math import log, sqrt, exp
  * 
  * def calc_d1(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
- *     d1 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          + iv/2 * sqrt(dte/252)
+ *     d1 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          + iv/2 * sqrt(dte/365)
  */
   __pyx_tuple_ = PyTuple_Pack(5, __pyx_n_s_forward, __pyx_n_s_strike, __pyx_n_s_iv, __pyx_n_s_dte, __pyx_n_s_d1); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
   __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(4, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_d1, 12, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 12, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":17
+  /* "optionpricing_dte.pyx":17
  *     return d1
  * 
  * def calc_d2(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
- *     d2 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          - iv/2 * sqrt(dte/252)
+ *     d2 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          - iv/2 * sqrt(dte/365)
  */
   __pyx_tuple__3 = PyTuple_Pack(5, __pyx_n_s_forward, __pyx_n_s_strike, __pyx_n_s_iv, __pyx_n_s_dte, __pyx_n_s_d2); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
   __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(4, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_d2, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 17, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":22
+  /* "optionpricing_dte.pyx":22
  *     return d2
  * 
  * def calc_delta(forward, strike, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -6014,7 +6012,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__5);
   __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(5, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_delta, 22, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 22, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":40
+  /* "optionpricing_dte.pyx":40
  *     return delta
  * 
  * def calc_gamma(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -6026,7 +6024,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__7);
   __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_gamma, 40, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 40, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":49
+  /* "optionpricing_dte.pyx":49
  *     return gamma
  * 
  * def calc_theta(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -6038,7 +6036,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__9);
   __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_theta, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 49, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":58
+  /* "optionpricing_dte.pyx":58
  *     return theta
  * 
  * def calc_vega(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -6050,7 +6048,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__11);
   __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_vega, 58, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 58, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":67
+  /* "optionpricing_dte.pyx":67
  *     return vega
  * 
  * def calc_charm(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
@@ -6062,7 +6060,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__13);
   __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_charm, 67, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 67, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":74
+  /* "optionpricing_dte.pyx":74
  *     return charm
  * 
  * def calc_deltatostrike(forward, delta, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -6074,7 +6072,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__15);
   __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(5, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_deltatostrike, 74, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 74, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":93
+  /* "optionpricing_dte.pyx":93
  *     return strike
  * 
  * def calc_intrinsic(forward, strike, oType):             # <<<<<<<<<<<<<<
@@ -6086,7 +6084,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__17);
   __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_intrinsic, 93, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 93, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":112
+  /* "optionpricing_dte.pyx":112
  *     return intrinsic
  * 
  * def calc_price(forward, strike, iv, dte, oType):             # <<<<<<<<<<<<<<
@@ -6098,11 +6096,11 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__19);
   __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(5, 0, 10, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_price, 112, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 112, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":131
+  /* "optionpricing_dte.pyx":131
  *     return price
  * 
  * def calc_forward(spotPrice, interestRate, divYield, dte):             # <<<<<<<<<<<<<<
- *     forward = spotPrice * exp((interestRate - divYield) * dte / 252)
+ *     forward = spotPrice * exp((interestRate - divYield) * dte / 365)
  *     return forward
  */
   __pyx_tuple__21 = PyTuple_Pack(5, __pyx_n_s_spotPrice, __pyx_n_s_interestRate, __pyx_n_s_divYield, __pyx_n_s_dte, __pyx_n_s_forward); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 131, __pyx_L1_error)
@@ -6110,7 +6108,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__21);
   __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(4, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_ubuntu_workspace_optionpri, __pyx_n_s_calc_forward, 131, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 131, __pyx_L1_error)
 
-  /* "optionpricing_tte.pyx":135
+  /* "optionpricing_dte.pyx":135
  *     return forward
  * 
  * def calc_impliedvol(forward, strike, dte, oType, actualPrice):             # <<<<<<<<<<<<<<
@@ -6135,18 +6133,18 @@ static int __Pyx_InitGlobals(void) {
   __pyx_int_2 = PyInt_FromLong(2); if (unlikely(!__pyx_int_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_10 = PyInt_FromLong(10); if (unlikely(!__pyx_int_10)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_100 = PyInt_FromLong(100); if (unlikely(!__pyx_int_100)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_252 = PyInt_FromLong(252); if (unlikely(!__pyx_int_252)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_365 = PyInt_FromLong(365); if (unlikely(!__pyx_int_365)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initoptionpricing_tte(void); /*proto*/
-PyMODINIT_FUNC initoptionpricing_tte(void)
+PyMODINIT_FUNC initoptionpricing_dte(void); /*proto*/
+PyMODINIT_FUNC initoptionpricing_dte(void)
 #else
-PyMODINIT_FUNC PyInit_optionpricing_tte(void); /*proto*/
-PyMODINIT_FUNC PyInit_optionpricing_tte(void)
+PyMODINIT_FUNC PyInit_optionpricing_dte(void); /*proto*/
+PyMODINIT_FUNC PyInit_optionpricing_dte(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -6161,7 +6159,7 @@ PyMODINIT_FUNC PyInit_optionpricing_tte(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_optionpricing_tte(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_optionpricing_dte(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -6190,7 +6188,7 @@ PyMODINIT_FUNC PyInit_optionpricing_tte(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("optionpricing_tte", __pyx_methods, __pyx_k_Black_Model_equations_for_calcu, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("optionpricing_dte", __pyx_methods, __pyx_k_Black_Model_equations_for_calcu, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -6207,14 +6205,14 @@ PyMODINIT_FUNC PyInit_optionpricing_tte(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_optionpricing_tte) {
+  if (__pyx_module_is_main_optionpricing_dte) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "optionpricing_tte")) {
-      if (unlikely(PyDict_SetItemString(modules, "optionpricing_tte", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "optionpricing_dte")) {
+      if (unlikely(PyDict_SetItemString(modules, "optionpricing_dte", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -6234,7 +6232,7 @@ PyMODINIT_FUNC PyInit_optionpricing_tte(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "optionpricing_tte.pyx":9
+  /* "optionpricing_dte.pyx":9
  * 
  * from __future__ import division
  * from scipy.stats import norm             # <<<<<<<<<<<<<<
@@ -6255,7 +6253,7 @@ PyMODINIT_FUNC PyInit_optionpricing_tte(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "optionpricing_tte.pyx":10
+  /* "optionpricing_dte.pyx":10
  * from __future__ import division
  * from scipy.stats import norm
  * from math import log, sqrt, exp             # <<<<<<<<<<<<<<
@@ -6290,154 +6288,154 @@ PyMODINIT_FUNC PyInit_optionpricing_tte(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":12
+  /* "optionpricing_dte.pyx":12
  * from math import log, sqrt, exp
  * 
  * def calc_d1(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
- *     d1 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          + iv/2 * sqrt(dte/252)
+ *     d1 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          + iv/2 * sqrt(dte/365)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_1calc_d1, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_1calc_d1, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_d1, __pyx_t_1) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":17
+  /* "optionpricing_dte.pyx":17
  *     return d1
  * 
  * def calc_d2(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
- *     d2 = log(forward/strike) / (iv * sqrt(dte/252)) \
- *          - iv/2 * sqrt(dte/252)
+ *     d2 = log(forward/strike) / (iv * sqrt(dte/365)) \
+ *          - iv/2 * sqrt(dte/365)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_3calc_d2, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_3calc_d2, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_d2, __pyx_t_1) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":22
+  /* "optionpricing_dte.pyx":22
  *     return d2
  * 
  * def calc_delta(forward, strike, iv, dte, oType):             # <<<<<<<<<<<<<<
  *     if iv == 0:
  *         d1 = 1
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_5calc_delta, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_5calc_delta, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_delta, __pyx_t_1) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":40
+  /* "optionpricing_dte.pyx":40
  *     return delta
  * 
  * def calc_gamma(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
  *     if iv <= 0 or dte <= 0:
  *         gamma = 0
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_7calc_gamma, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_7calc_gamma, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_gamma, __pyx_t_1) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":49
+  /* "optionpricing_dte.pyx":49
  *     return gamma
  * 
  * def calc_theta(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
  *     if iv <= 0 or dte <= 0:
  *         theta = 0
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_9calc_theta, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_9calc_theta, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_theta, __pyx_t_1) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":58
+  /* "optionpricing_dte.pyx":58
  *     return theta
  * 
  * def calc_vega(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
  *     if iv <= 0 or dte <= 0:
  *         vega = 0
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_11calc_vega, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_11calc_vega, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_vega, __pyx_t_1) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":67
+  /* "optionpricing_dte.pyx":67
  *     return vega
  * 
  * def calc_charm(forward, strike, iv, dte):             # <<<<<<<<<<<<<<
  *     d1 = calc_d1(forward, strike, iv, dte)
  *     d2 = calc_d2(forward, strike, iv, dte)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_13calc_charm, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_13calc_charm, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_charm, __pyx_t_1) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":74
+  /* "optionpricing_dte.pyx":74
  *     return charm
  * 
  * def calc_deltatostrike(forward, delta, iv, dte, oType):             # <<<<<<<<<<<<<<
  *     if delta > 1:
  *         delta = delta / 100
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_15calc_deltatostrike, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_15calc_deltatostrike, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_deltatostrike, __pyx_t_1) < 0) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":93
+  /* "optionpricing_dte.pyx":93
  *     return strike
  * 
  * def calc_intrinsic(forward, strike, oType):             # <<<<<<<<<<<<<<
  *     if oType == 1:
  *         if forward > strike:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_17calc_intrinsic, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_17calc_intrinsic, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_intrinsic, __pyx_t_1) < 0) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":112
+  /* "optionpricing_dte.pyx":112
  *     return intrinsic
  * 
  * def calc_price(forward, strike, iv, dte, oType):             # <<<<<<<<<<<<<<
  *     if iv <= 0 or dte <= 0:
  *         price = calc_intrinsic(forward, strike, oType)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_19calc_price, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_19calc_price, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_price, __pyx_t_1) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":131
+  /* "optionpricing_dte.pyx":131
  *     return price
  * 
  * def calc_forward(spotPrice, interestRate, divYield, dte):             # <<<<<<<<<<<<<<
- *     forward = spotPrice * exp((interestRate - divYield) * dte / 252)
+ *     forward = spotPrice * exp((interestRate - divYield) * dte / 365)
  *     return forward
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_21calc_forward, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_21calc_forward, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_forward, __pyx_t_1) < 0) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":135
+  /* "optionpricing_dte.pyx":135
  *     return forward
  * 
  * def calc_impliedvol(forward, strike, dte, oType, actualPrice):             # <<<<<<<<<<<<<<
  *     """Use bisection search to solve for the implied volatilty
  *     of a given option """
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_tte_23calc_impliedvol, NULL, __pyx_n_s_optionpricing_tte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17optionpricing_dte_23calc_impliedvol, NULL, __pyx_n_s_optionpricing_dte); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_impliedvol, __pyx_t_1) < 0) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "optionpricing_tte.pyx":1
+  /* "optionpricing_dte.pyx":1
  * """             # <<<<<<<<<<<<<<
  * Black Model equations for calculating option price and greeks.
- * * DTE is defined as the number of TRADING days to expiration
+ * * DTE is defined as the number of CALENDAR days to expiration
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -6452,11 +6450,11 @@ PyMODINIT_FUNC PyInit_optionpricing_tte(void)
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init optionpricing_tte", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init optionpricing_dte", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init optionpricing_tte");
+    PyErr_SetString(PyExc_ImportError, "init optionpricing_dte");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

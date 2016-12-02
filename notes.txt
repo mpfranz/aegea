@@ -1,25 +1,24 @@
 ## Git Commands
 
-Action:  See a list of the remote origins git knows about
-Command: git remote -v
+1. See a list of remote repositories we are connected to.
+    -> git remote -v
 
-Action:  Check the current status of git
-Command: git status
-    -> You should see a list of tracked and untracked files
-
-Action:  Add files to git.
-Command: git add <filename>
-Example: git add sample.txt
-    -> To add all use command: git add .
-
-Action:  Push changes to the git remote origins
-Command: git push origin master
-    -> Enter github username and password
-    -> You should see the message "Everything up-to-date"
+2. Check the current status of git.
+    -> git status
     
+3. Add all files to local git environment.
+    -> git add .
+
+4. Commit all files to local repository.
+    -> git commit -m "Describe this commit"
+
+5. Push local repository to the remote repository.
+    -> git push origin master
+    -> github username
+    -> github password
+
 
 ## Bash Commands
 
-Action:  Create a file
-Command: touch <filename>.<extension>
-Example: tough sample.txt
+1. Create a file
+    -> touch <filename>

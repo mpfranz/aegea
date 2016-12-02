@@ -1,6 +1,6 @@
 """
 Black Model equations for calculating option price and greeks.
-* YTE is defined as years to expiration
+* YTE is defined as YEARS to expiration
 * Theta and Charm are in years - divide by days per year (252 or 365)
 * Uses discounted futures price in place of spot price in BS model
 * Functions return None in event of an error
@@ -168,50 +168,3 @@ def calc_impliedvol(forward, strike, yte, oType, actualPrice):
         print '\n\t Max. iterations (%r) exceeded.' % nIter
         
     return volMD
-
-# def test():
-#     print 'Running tests...'
-    
-#     # forward, strike, iv, yte, oType, delta, optionPrice, spotPrice, r, y
-    
-#     t1 = [2209.25, 2210, 0.1002, 15, 'C',  50.43, 21.60, 0, 0, 0]
-#     # t2 = [2209.25, 2210, 0.1002, 15, 'c',  50.43, 21.60, 0, 0, 0]
-#     # t3 = [2209.25, 2210, 0.1002, 15, 'P', -49.57, 21.60, 0, 0, 0]
-#     # t4 = [2209.25, 2210, 0.1002, 15, 'p', -49.57, 21.60, 0, 0, 0]
-    
-#     tests = [t1]
-#     nTest = 0
-    
-#     for test in tests:
-#         nTest = nTest + 1
-#         forward = test[0]
-#         strike = test[1]
-#         iv = test[2]
-#         yte = test[3]/252
-#         oType = test[4]
-#         delta = test[5]
-#         price = test [6]
-#         spotPrice = test[7]
-#         interestRate = test[8]
-#         divYield = test[9]
-    
-#         print '\nTest %r      ' % nTest
-#         print 'd1:         ', calc_d1(forward, strike, iv, yte)
-#         print 'd2:         ', calc_d2(forward, strike, iv, yte)
-#         print 'delta:      ', calc_delta(forward, strike, iv, yte, oType)
-#         print 'gamma:      ', calc_gamma(forward, strike, iv, yte)
-#         print 'theta:      ', calc_theta(forward, strike, iv, yte)/252
-#         print 'vega:       ', calc_vega(forward, strike, iv, yte)
-#         print 'charm:      ', calc_charm(forward, strike, iv, yte)/252
-#         print 'strike:     ', calc_deltatostrike(forward, delta, iv, yte, oType)
-#         print 'price:      ', calc_price(forward, strike, iv, yte, oType)
-#         print 'intrinsic:  ', calc_intrinsic(forward, strike, oType)
-#         print 'implied vol:', calc_impliedvol(forward, strike, yte, oType, price)
-#         print 'forward:    ', calc_forward(spotPrice, interestRate, divYield, yte)
-        
-#     # print '\nTesting complete. \n'
-
-# ## MAIN
-# test()
-    
-
